@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "448487398130",
+    "firebase_url": "https://haba-1a221.firebaseio.com",
+    "project_id": "haba-1a221",
+    "storage_bucket": "haba-1a221.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:448487398130:android:0189ea34c6979800",
+        "android_client_info": {
+          "package_name": "com.oasis.haba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "448487398130-4ur111c1ni6tq51shbibmd87q269hfr8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.oasis.haba",
+            "certificate_hash": "9d8d704825e5b9d72f3944a915e09440b828575b"
+          }
+        },
+        {
+          "client_id": "448487398130-v0h538sf8cl8bi02cja8ir36dfli1di3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqOlW8RUtOS8JkOz68BOFZuNTBqoKDXFA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "448487398130-v0h538sf8cl8bi02cja8ir36dfli1di3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
