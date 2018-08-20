@@ -1,6 +1,6 @@
 package com.oasis.haba.ui;
 
-import android.app.ProgressDialog;
+
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,7 @@ import android.support.design.widget.TextInputLayout;
 import android.support.v4.app.Fragment;
 
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.oasis.haba.R;
+
+import static android.support.constraint.Constraints.TAG;
 
 public class LoginFragment extends Fragment {
     private TextInputLayout mEmail;
@@ -56,10 +59,21 @@ public class LoginFragment extends Fragment {
         mProgress = view.findViewById(R.id.progressBar);
 
 
+
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+                                         @Override
+                                         public void onClick(View view) {
+                                             MainActivity.fragmentManager.beginTransaction().
+                                                     replace(R.id.landingPage,new RegisterFragment(),null).
+                                                     addToBackStack(null).commit();
+
+                                         }
+
+                                     });
+
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 String email = mEmail.getEditText().getText().toString();
                 final String password = mPassword.getEditText().getText().toString();
 
@@ -77,53 +91,41 @@ public class LoginFragment extends Fragment {
                 mProgress.setVisibility(View.VISIBLE);
 
                 //Authenticate User
-
                 mAuth.signInWithEmailAndPassword(email, password)
                         .addOnCompleteListener(getActivity(), new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                if (task.isSuccessful()) {
+                                    // Sign in success, update UI with the signed-in user's information
+                                    mProgress.setVisibility(View.GONE);
+                                    startActivity(new Intent(getActivity(), HomeActivity.class));
 
-                                // If sign in fails, display a message to the user. If sign in succeeds
-                                // the auth state listener will be notified and logic to handle the
-                                // signed in user can be handled in the listener.
+                                } else {
+                                    // If sign in fails, display a message to the user.
+                                    Log.w(TAG, "signInWithEmail:failure", task.getException());
+                                    Toast.makeText(getActivity(), "Authentication failed.",
+                                            Toast.LENGTH_SHORT).show();
+                                    mProgress.setVisibility(View.GONE);
 
-                                mProgress.setVisibility(View.GONE);
-
-                                if (!task.isSuccessful()) {
-
-                                    //There was an error
-
-                                    if (password.length() < 6) {
-                                        mPassword.setError("Password too Short!");
-
-                                    }
-
-                                    else {
-                                        Toast.makeText(getActivity(),"Authentication Failed. There was an error!",
-                                                Toast.LENGTH_SHORT).show();
-                                    }
                                 }
 
-                                else {
-
-                                    Intent intent = new Intent(getContext(), HomeActivity.class);
-                                    startActivity(intent);
-                                }
                             }
                         });
             }
-        });
+       });
 
         return view;
     }
 
-    @Override
-    public void onStart() {
-        super.onStart();
+//    @Override
+//    public void onStart() {
+//        super.onStart();
+//
+//        if (mAuth.getCurrentUser() != null) {
+//            startActivity(new Intent(getActivity(), HomeActivity.class));
+//        }
+//
+//    }
 
-        if (mAuth.getCurrentUser() != null) {
-            startActivity(new Intent(context, HomeFragment.class));
-        }
 
-    }
 }
