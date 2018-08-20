@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -13,7 +17,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
+        android:background="@color/ghostwhite"
         android:orientation="vertical">
 
         <TextView
@@ -21,14 +25,13 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="5dp"
-            android:fontFamily="@font/proximanovaaltregular"
-            android:text="Summary"
+            android:fontFamily="@font/proximanovasemibold"
+            android:text="My Chamas"
             android:textAlignment="center"
             android:textAppearance="@style/TextAppearance.AppCompat.Menu"
             android:textColor="@color/colorPrimary"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:typeface="normal" />
+            />
 
         <TextView
             android:layout_width="wrap_content"
@@ -38,162 +41,44 @@
             android:layout_marginTop="5dp"
             android:fontFamily="@font/proximanovasemibold"
             android:text="27 Jun,2018"
+            android:textSize="12dp"
             android:textColor="@color/colorPrimary" />
 
-        <android.support.v7.widget.CardView
-             android:layout_width="match_parent"
-             android:layout_height="150dp"
-             android:layout_marginBottom="10dp"
-             android:layout_marginRight="10dp"
-            android:layout_marginLeft="10dp"
-             app:cardElevation="5dp"
-             app:cardCornerRadius="5dp"
-             app:cardBackgroundColor="@color/dodgerblue">
 
-            <android.support.constraint.ConstraintLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-
-                <View
-                    android:id="@+id/view3"
-                    android:layout_width="1dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/ghostwhite"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <View
-                    android:id="@+id/view4"
-                    android:layout_width="0dp"
-                    android:layout_height="1dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:background="@color/ghostwhite"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/view3"
-                    app:layout_constraintTop_toBottomOf="@+id/totalLoan" />
-
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:fontFamily="@font/proximanovaaltregular"
-                    android:text="Total Savings"
-                    android:textAlignment="center"
-                    android:textAppearance="@android:style/TextAppearance.Material.Menu"
-                    app:layout_constraintBottom_toTopOf="@+id/totalSavings"
-                    app:layout_constraintEnd_toStartOf="@+id/view3"
-                    app:layout_constraintHorizontal_bias="0.585"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintVertical_bias="0.75" />
-
-                <TextView
-                    android:id="@+id/totalSavings"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="32dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:gravity="center"
-                    android:text="36000"
-                    android:textAlignment="center"
-                    android:textColor="@color/ghostwhite"
-                    android:textSize="34sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/view3"
-                    app:layout_constraintHorizontal_bias="1.0"
-                    app:layout_constraintStart_toStartOf="parent" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="16dp"
-                    android:fontFamily="@font/proximanovaaltregular"
-                    android:text="Loan Total"
-                    android:textAlignment="center"
-                    android:textAppearance="@android:style/TextAppearance.Material.Menu"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/view3"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/totalLoan"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="5000"
-                    android:textAlignment="center"
-                    android:textColor="@color/ghostwhite"
-                    android:textSize="24sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/view3"
-                    app:layout_constraintTop_toBottomOf="@+id/textView6" />
-
-                <TextView
-                    android:id="@+id/textView8"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:text="No. of Chamas:"
-                    android:textAlignment="center"
-                    android:textAppearance="@android:style/TextAppearance.Material.Menu"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toEndOf="@+id/view3"
-                    app:layout_constraintTop_toBottomOf="@+id/view4" />
-
-                <TextView
-                    android:id="@+id/numberofChamas"
-                    android:layout_width="64dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginEnd="8dp"
-                    android:layout_marginStart="8dp"
-                    android:layout_marginTop="8dp"
-                    android:textColor="@color/ghostwhite"
-                    android:fontFamily="@font/proximanovaaltregular"
-                    android:text="4"
-                    android:textAlignment="center"
-                    android:textSize="20sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="@+id/view4"
-                    app:layout_constraintTop_toBottomOf="@+id/textView8" />
-
-            </android.support.constraint.ConstraintLayout>
-
-         </android.support.v7.widget.CardView>
 
     </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/groupItemRecyclerView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:background="@color/ghostwhite"
+        >
+
+    </android.support.v7.widget.RecyclerView>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:alpha="0.5"
+        android:background="@color/colorAccent"/>
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_margin="6dp"
-        android:fontFamily="@font/proximanovaaltregular"
+        android:layout_margin="4dp"
+        android:elevation="8dp"
+        android:fontFamily="@font/proximanovasemibold"
         android:text="Select an activity:"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:textSize="18sp" />
+        android:textSize="14sp" />
 
 
     <android.support.constraint.ConstraintLayout
@@ -461,3 +346,4 @@
 
 </LinearLayout>
 
+</ScrollView>

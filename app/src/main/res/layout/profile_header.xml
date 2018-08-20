@@ -2,40 +2,71 @@
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layoutHeader"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
+    android:layout_height="270dp"
     android:background="@color/profileBackground"
     android:orientation="vertical"
-    android:padding="20dp"
     >
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:id="@+id/userPicture"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
         android:layout_gravity="center"
+        android:scaleType="fitCenter"
         android:layout_marginBottom="10dp"
         app:srcCompat="@drawable/loah_profile" />
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <View
+        android:id="@+id/view4"
+        android:layout_width="150dp"
+        android:layout_height="1dp"
         android:layout_gravity="center"
-        android:layout_marginTop="5dp"
-        android:fontFamily="@font/proximanovasemibold"
-        android:text="Loah Sabat"
-        android:textAlignment="center"
-        android:textColor="@color/altTextColor"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+        android:background="@color/colorAccent"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="@font/proximanovaaltregular"
-        android:text="loahsunflower@gmail.com"
-        android:textAlignment="center"
-        android:textColor="@color/altTextColor" />
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginBottom="0dp">
+
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/proximanovasemibold"
+            android:text="Loah Sabat"
+            android:textAlignment="center"
+            android:textColor="@color/altTextColor"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/user_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:fontFamily="@font/proximanovaaltregular"
+            android:text="loahsunflower@gmail.com"
+            android:textColor="@color/altTextColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/user_name" />
+
+
+
+
+    </android.support.constraint.ConstraintLayout>
+
+
 
 </LinearLayout>
