@@ -1,49 +1,37 @@
 package com.oasis.haba.DbModel;
 
+import android.net.Uri;
+
 public class ChamaPOJO {
 
-    public String name ;
-    private double Expenses;
-    private double amountContributed;
-    private double loans;
+    public String groupname;
+    public String admin;
+    public int paybillNumber;
+    public int contributionAmount;
+    public int contributionTimes;
+    public String contributionPeriod;
+    public Uri groupPictureUri;
 
-    public ChamaPOJO(String name, double expenses, double amountContributed, double loans) {
-        this.name = name;
-        Expenses = expenses;
-        this.amountContributed = amountContributed;
-        this.loans = loans;
+
+    public ChamaPOJO() {
     }
 
-    public String getExpenses() {
+    // Constructor to call Group Items in the recycler view in the HomeFragment
 
-        return Double.toString(Expenses);
+
+    public ChamaPOJO(String groupname, Uri groupPictureUri) {
+        this.groupname = groupname;
+        this.groupPictureUri = groupPictureUri;
     }
 
-    public void setExpenses(double expenses) {
-        Expenses = expenses;
+    public ChamaPOJO (String admin, String groupname, int paybillNumber, int contributionAmount, int contributionTimes, String contributionPeriod) {
+        this.groupname = groupname;
+        this.admin = admin;
+        this.paybillNumber = paybillNumber;
+        this.contributionAmount = contributionAmount;
+        this.contributionTimes = contributionTimes;
+        this.contributionPeriod = contributionPeriod;
     }
 
-    public String getname() {
-        return name;
-    }
 
-    public void setname(String name) {
-        this.name = name;
-    }
-
-    public double getAmountContributed() {
-        return amountContributed;
-    }
-
-    public void setAmountContributed(double amountContributed) {
-        this.amountContributed = amountContributed;
-    }
-
-    public double getLoans() {
-        return loans;
-    }
-
-    public void setLoans(double loans) {
-        this.loans = loans;
-    }
 }
