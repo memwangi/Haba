@@ -29,4 +29,6 @@
         <activity android:name=".ui.Chama"></activity>
     </application>
 
+
+
 </manifest>

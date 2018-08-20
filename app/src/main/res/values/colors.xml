@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <color name="colorAccent">#536dfe</color>
+    <color name="colorPrimaryDark">#6aa2ff</color>
+    <color name="colorPrimary">#1e1c46</color>
+    <color name="primaryColor">#ffffff</color>
+
+    <color name="profileBackground">#ede7f6</color>
+    <color name="colorPrimaryDarkgrey">#6c6c6c</color>
+    <color name="altTextColor">#000000</color>
+    <color name="tabTextColor">#FF4081</color>
+    <color name="ghostwhite">#fdfdfe</color>
+    <color name="dodgerblue">#3690FF</color>
+    <color name="backgroundEtColor">#BEC2C1</color>
+
+    #DBEEFF
+
+    //Background photo
+    <color name="colorPhoto"> #4f6978</color>
+
+    //For icons
+    <color name="iconRed">#990d2e</color>
+    <color name="iconBlue">#0085B6</color>
+    <color name="iconGreen">#00D49D</color>
+    <color name="iconYellow">#FEDF03</color>
+    <color name="greenText">#43a047</color>
+    <color name="textRed">#b43e3e</color>
+
+    //
+
+    <color name="PacificBlue">#0990d6</color>
+
+
+
+</resources>

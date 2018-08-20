@@ -1,4 +1,4 @@
-package com.oasis.haba.ui;
+package com.oasis.haba.util;
 
 import android.content.Context;
 import android.support.annotation.NonNull;
@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -14,34 +15,34 @@ import com.oasis.haba.R;
 
 import java.util.List;
 
-public class ChamaGraphCardsAdapter extends RecyclerView.Adapter<ChamaGraphCardsAdapter.MyViewHolder> {
+public class groupItemAdapter extends RecyclerView.Adapter<groupItemAdapter.MyViewHolder> {
 
     Context mContext;
-    List<ChamaPOJO> mData;
+    List<ChamaPOJO> chamadetails;
 
-
-    public ChamaGraphCardsAdapter(Context mContext, List<ChamaPOJO> mData) {
+    public groupItemAdapter(Context mContext, List<ChamaPOJO> chamadetails) {
         this.mContext = mContext;
-        this.mData = mData;
+        this.chamadetails = chamadetails;
     }
 
 
-    //Viewholder for the recyclerView
-
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        private LinearLayout item_chama;
-        private TextView Expenses;
-        private TextView name;
+        private LinearLayout item_group;
+        private TextView groupName,groupGrossIncome,myLoans,myShareValue;
+         private ImageView groupPicture;
 
 
 
         public MyViewHolder(View itemView) {
             super(itemView);
 
-            item_chama = (LinearLayout) itemView.findViewById(R.id.item_chama);
-            Expenses = itemView.findViewById(R.id.Expenses);
-            name = itemView.findViewById(R.id.chamaName);
+            item_group = (LinearLayout) itemView.findViewById(R.id.item_group);
+            groupName = itemView.findViewById(R.id.groupName);
+            groupGrossIncome = itemView.findViewById(R.id.groupIncome);
+            myLoans = itemView.findViewById(R.id.LoansMember);
+            myShareValue = itemView.findViewById(R.id.netShareValue);
+            groupPicture = itemView.findViewById(R.id.groupProfilePic);
         }
     }
 
@@ -50,25 +51,20 @@ public class ChamaGraphCardsAdapter extends RecyclerView.Adapter<ChamaGraphCards
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
         View v;
-        v = LayoutInflater.from(mContext).inflate(R.layout.item_chama,parent,false);
+        v = LayoutInflater.from(mContext).inflate(R.layout.itemgroup,parent,false);
         final MyViewHolder viewHolder = new MyViewHolder(v);
 
         return viewHolder;
+
     }
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
-        holder.Expenses.setText(mData.get(position).getExpenses());
-        holder.name.setText(mData.get(position).getname());
 
     }
 
     @Override
     public int getItemCount() {
-        return mData.size();
+        return 5;
     }
-
-
-
-
 }
