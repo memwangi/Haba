@@ -13,6 +13,28 @@
     android:layout_height="match_parent"
     >
 
+    <ImageView
+        android:id="@+id/imageofGroup"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"/>
+    <TextView
+        android:id="@+id/groupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:alpha="0.7"
+        android:padding="8dp"
+        android:fontFamily="@font/proximanovaaltregular"
+        android:text="Mapato Investment Group"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp" />
+
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -28,21 +50,23 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
         <android.support.constraint.ConstraintLayout
             android:id="@+id/exp"
             android:layout_width="match_parent"
-            android:layout_height="248dp">
+            android:layout_height="wrap_content">
 
 
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:layout_marginTop="16dp"
+                android:layout_marginTop="8dp"
                 android:alpha="0.5"
                 android:fontFamily="@font/proximanovaaltregular"
                 android:text="Current Balance"
@@ -50,6 +74,7 @@
                 android:textAllCaps="true"
                 android:textColor="@color/colorPrimary"
                 android:textSize="12sp"
+                app:layout_constraintBottom_toTopOf="@+id/CurrentBalance"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -74,8 +99,7 @@
                 android:id="@+id/CurrentBalance"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="16dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
                 android:fontFamily="@font/proximanovaaltregular"
                 android:text="240,000.00"
                 android:textAlignment="center"
@@ -85,24 +109,23 @@
                 app:layout_constraintBottom_toTopOf="@+id/guideline6"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
-                app:layout_constraintStart_toEndOf="@+id/Currency"
-                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+                app:layout_constraintStart_toEndOf="@+id/Currency" />
 
 
             <TextView
                 android:id="@+id/textDeposits"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginEnd="8dp"
-                android:layout_marginStart="8dp"
+                android:layout_marginEnd="4dp"
+                android:layout_marginStart="4dp"
                 android:layout_marginTop="8dp"
-                android:alpha="0.6"
+
                 android:fontFamily="@font/proximanovaaltregular"
                 android:text="Deposits"
                 android:textAlignment="center"
                 android:textAllCaps="true"
-                android:textColor="@color/colorPrimary"
-                android:textSize="10sp"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/view7"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@+id/guideline6" />
@@ -114,13 +137,13 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:alpha="0.6"
+
                 android:fontFamily="@font/proximanovaaltregular"
                 android:text="Loans to Members"
                 android:textAlignment="center"
                 android:textAllCaps="true"
-                android:textColor="@color/colorPrimary"
-                android:textSize="10sp"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toStartOf="@+id/view5"
                 app:layout_constraintStart_toEndOf="@+id/view7"
                 app:layout_constraintTop_toTopOf="@+id/guideline6" />
@@ -132,13 +155,12 @@
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="8dp"
-                android:alpha="0.6"
                 android:fontFamily="@font/proximanovaaltregular"
                 android:text="Group Expenses"
                 android:textAlignment="center"
                 android:textAllCaps="true"
-                android:textColor="@color/colorPrimary"
-                android:textSize="10sp"
+                android:textColor="@color/colorAccent"
+                android:textSize="12sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/view5"
                 app:layout_constraintTop_toTopOf="@+id/guideline6" />
@@ -158,33 +180,33 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/textDeposits" />
 
-            <view
+            <View
                 android:id="@+id/view7"
                 android:layout_width="2dp"
-                android:layout_height="0dp"
+                android:layout_height="65dp"
                 android:layout_marginStart="8dp"
-                android:alpha="0"
+                android:alpha="0.3"
+
                 android:background="@color/colorPrimary"
-                android:textColor="@color/azureColorPrimary"
                 app:layout_constraintStart_toEndOf="@+id/textView16"
                 app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
-            <view
+            <View
                 android:id="@+id/view5"
                 android:layout_width="2dp"
-                android:layout_height="0dp"
+                android:layout_height="65dp"
                 android:layout_marginEnd="8dp"
                 android:layout_marginStart="8dp"
-                android:alpha="0"
+                android:alpha="0.3"
                 android:background="@color/colorPrimary"
-                android:textColor="@color/azureColorPrimary"
+
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/view7"
                 app:layout_constraintTop_toTopOf="@+id/guideline6" />
 
             <android.support.constraint.Guideline
                 android:id="@+id/guideline6"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
                 app:layout_constraintGuide_percent="0.41" />
@@ -226,7 +248,149 @@
 
         </android.support.constraint.ConstraintLayout>
 
-    </LinearLayout>    
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etNumber"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:background="@drawable/et_style_white"
+                android:hint="Enter member Phone Number"
+                android:inputType="text"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textAlignment="center" />
+
+
+            <Button
+                android:id="@+id/addMember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Add Member"
+                android:layout_marginTop="10dp"
+                android:elevation="8dp"
+                android:textColor="@color/ghostwhite"
+                android:background="@drawable/et_style_white"/>
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="20dp"
+            android:paddingBottom="20dp"
+            android:background="@color/colorAccent"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/Amount"
+                android:layout_width="250dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="8dp"
+                android:layout_gravity="center"
+                android:background="@drawable/et_style_white"
+                android:hint="Enter Contribution"
+                android:inputType="text"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:textAlignment="center" />
+
+
+            <Button
+                android:id="@+id/Pay"
+                android:layout_width="wrap_content"
+
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="Make Payment"
+                android:layout_marginTop="10dp"
+                android:elevation="8dp"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:textColor="@color/colorPrimary"
+                android:layout_height="50dp"
+                android:background="@android:color/white"/>
+
+
+
+        </LinearLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="start"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="8dp"
+
+            android:fontFamily="@font/proximanovasemibold"
+            android:textAlignment="center"
+
+            android:textColor="@color/colorAccent"
+            android:textSize="14sp"
+            android:text="Members"/>
+
+
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/usersRecyclerView"
+            android:background="@color/ghostwhite"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+
+
+    </LinearLayout>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:elevation="4dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:alpha="0.5"
+            android:fontFamily="@font/proximanovaaltregular"
+            android:textAlignment="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp"
+            android:text="Feed"/>
+
+
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/feedRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="500dp" />
     
     
 </LinearLayout>
