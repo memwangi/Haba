@@ -46,7 +46,8 @@ Upload profile picture, Log out and access the Chama(s) one has created.
 
 ## Member Group View
 <p align="center">
-  <img width="400" height="720" src=app/Screenshots/MemberGroupView.png
+  <img width="400" height="720" src=app/Screenshots/Screenshot_20180914-214330.png
+    
     >
 </p>
 More Layouts to be posted soon!(Work in Progress)
