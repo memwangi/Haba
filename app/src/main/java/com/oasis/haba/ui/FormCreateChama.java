@@ -61,8 +61,8 @@ public class FormCreateChama extends Fragment {
     Context context;
     Spinner spinner;
     private static String groupName;
-    private String phone;
-    private String userGroupId;
+    private  String phone;
+    private static String userGroupId;
     private DatabaseHelper helper;
     ArrayAdapter<CharSequence> adapter;
     private Button btnCreateChama;
@@ -124,7 +124,7 @@ public class FormCreateChama extends Fragment {
         final String admin = mAuth.getCurrentUser().getEmail();
         final String groupname = chamaname.getEditText().getText().toString();
         final int payBillNumber = Integer.parseInt(mpesaPaybill.getEditText().getText().toString());
-        final int amountPerPerson = Integer.parseInt(amountPerMember.getEditText().getText().toString());
+        final String amountPerPerson = amountPerMember.getEditText().getText().toString();
         final int timesOfContribution = Integer.parseInt(contributionTimesPerPeriod.getText().toString());
         final String periodOfContribution = contributionPeriod.trim();
 
@@ -200,5 +200,7 @@ public class FormCreateChama extends Fragment {
         return groupName;
     }
 
-
+    public static String getUserGroupId() {
+        return userGroupId;
+    }
 }

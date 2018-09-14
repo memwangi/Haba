@@ -61,7 +61,7 @@ public class Chama extends AppCompatActivity {
     private FirebaseAuth mAuth;
     private DatabaseHelper db;
     Daraja daraja;
-    String ThegroupName = FormCreateChama.getGroupName();
+    private String ThegroupName = FormCreateChama.getGroupName();
 
 
     @Override
@@ -79,8 +79,6 @@ public class Chama extends AppCompatActivity {
         DepositAmount = findViewById(R.id.Amount);
         MemberNumber = findViewById(R.id.etNumber);
 
-        //Set group Image
-        setGroupImage();
 
         //Display Member Profile Pictures in the recycler View
         recyclerView = findViewById(R.id.usersRecyclerView);
@@ -140,7 +138,7 @@ public class Chama extends AppCompatActivity {
                 "174379",
                 "254716953405",
                 "http://mycallbackurl.com/checkout.php",
-                ThegroupName,
+                "HabahABA",
                 "Chama Contribution"
         );
 
@@ -181,9 +179,11 @@ public class Chama extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
-                Object _key = dataSnapshot.getValue();
+                Object _key = dataSnapshot.getKey();
 
-                final String groupKey = (String.valueOf(_key));
+               // final String groupKey = (String.valueOf(_key));
+
+                final String groupKey = FormCreateChama.getUserGroupId();
 
                 Log.i("Chama Activity", "Group Key Fetched");
 
@@ -214,10 +214,9 @@ public class Chama extends AppCompatActivity {
 
                                             //Add the list of groups to which the user belongs, to the userNode
                                             //First get the group name
-
                                             //Map to store group name and group ID
                                             Map<String, Object> mapGroup = new HashMap<>();
-                                            mapGroup.put(ThegroupName, groupKey);
+                                            mapGroup.put(groupKey,ThegroupName );
                                             DatabaseReference userGroups = dbRef.child("Users").child(amemberNumber).child("MemberOfGroup");
                                             userGroups.updateChildren(mapGroup)
                                                     .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -271,21 +270,14 @@ public class Chama extends AppCompatActivity {
 
     }
 
-    public void setGroupImage() {
-
-
-        groupPicture = findViewById(R.id.imageofGroup);
-        Uri downloadUrl = AddGroupPhotoFragment.getPhotoUrl();
-        Picasso.get()
-                .load(downloadUrl)
-                .transform(new CircleTransform())
-                .resize(100, 100)
-                .centerCrop()
-                .into(groupPicture);
-        groupTitle.setText(ThegroupName);
-    }
-
 
     //Prepare member data, fetches the data to be input into the recycler view that displays the list of members
+    public void prepareMemberData(){
+        //Get the phone number:Since the phone number is stored with the group key in child Groups and Members
+        //I can access it if only i have the group key
+
+
+
+    }
 
 }

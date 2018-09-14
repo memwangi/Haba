@@ -70,6 +70,7 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
     private ProgressBar mProgress;
     private String phone;
     Context context;
+    private Uri downloadUrl;
     private DatabaseHelper db;
     private NavigationView navigationView;
 
@@ -230,7 +231,7 @@ public class HomeActivity extends AppCompatActivity implements OnNavigationItemS
                             @Override
                             public void onSuccess(Uri uri) {
 
-                                Uri downloadUrl = uri;
+                                downloadUrl = uri;
                                 //Use Picasso to set downloaded image into image view.
                                 Picasso.get()
                                         .load(downloadUrl)

@@ -1,5 +1,7 @@
 package com.oasis.haba.DbModel;
 
+import android.net.Uri;
+
 public class User {
     public static String TABLE_NAME = "UserNumber";
     public static String USER_NUMBER = "PhoneNumber";
@@ -9,6 +11,7 @@ public class User {
     public String userName;
     public String emailaddress;
     public String phoneNumber;
+    private Uri imageLocation;
 
 
     // Default constructor required for calls to

@@ -26,9 +26,8 @@
         <activity
             android:name=".ui.CreateChamaActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
-        <activity android:name=".ui.Chama"></activity>
+        <activity android:name=".ui.Chama" />
+        <activity android:name=".ui.MemberChama"></activity>
     </application>
-
-
 
 </manifest>

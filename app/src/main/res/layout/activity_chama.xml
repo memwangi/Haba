@@ -13,12 +13,6 @@
     android:layout_height="match_parent"
     >
 
-    <ImageView
-        android:id="@+id/imageofGroup"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="10dp"/>
     <TextView
         android:id="@+id/groupTitle"
         android:layout_width="wrap_content"
@@ -331,29 +325,7 @@
         </LinearLayout>
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:layout_marginEnd="8dp"
-            android:layout_gravity="start"
-            android:layout_marginStart="10dp"
-            android:layout_marginTop="8dp"
 
-            android:fontFamily="@font/proximanovasemibold"
-            android:textAlignment="center"
-
-            android:textColor="@color/colorAccent"
-            android:textSize="14sp"
-            android:text="Members"/>
-
-
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/usersRecyclerView"
-            android:background="@color/ghostwhite"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
 
 
 

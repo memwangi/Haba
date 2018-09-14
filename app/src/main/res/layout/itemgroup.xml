@@ -76,28 +76,28 @@
                 app:layout_constraintTop_toBottomOf="@+id/groupName" />
 
             <TextView
-                android:id="@+id/textView5"
+                android:id="@+id/PaybillNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:alpha="0.7"
-                android:text="My Net Share Value:"
+                android:text="M-Pesa PayBill:"
                 android:textColor="@color/colorPrimary"
                 android:textSize="12sp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/netShareValue"
+                app:layout_constraintBaseline_toBaselineOf="@+id/paybillNo"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/netShareValue"
+                android:id="@+id/paybillNo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:text="39200.00"
+                android:text="542865"
                 android:textAlignment="center"
                 android:textColor="@color/altTextColor"
                 android:textSize="12sp"
-                app:layout_constraintStart_toEndOf="@+id/textView5"
+                app:layout_constraintStart_toEndOf="@+id/PaybillNo"
                 app:layout_constraintTop_toBottomOf="@+id/groupIncome" />
 
             <TextView
@@ -106,25 +106,25 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:alpha="0.7"
-                android:text="My Loans:"
+                android:text="Amount Per Member:"
 
                 android:textColor="@color/colorPrimary"
                 android:textSize="12sp"
-                app:layout_constraintBaseline_toBaselineOf="@+id/LoansMember"
+                app:layout_constraintBaseline_toBaselineOf="@+id/ContributionAmnt"
                 app:layout_constraintStart_toStartOf="parent" />
 
             <TextView
-                android:id="@+id/LoansMember"
+                android:id="@+id/ContributionAmnt"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="8dp"
                 android:layout_marginTop="4dp"
-                android:text="0.00"
+                android:text="500"
                 android:textAlignment="center"
                 android:textColor="@color/altTextColor"
                 android:textSize="12sp"
                 app:layout_constraintStart_toEndOf="@+id/textView8"
-                app:layout_constraintTop_toBottomOf="@+id/textView5" />
+                app:layout_constraintTop_toBottomOf="@+id/PaybillNo" />
 
         </android.support.constraint.ConstraintLayout>
 
